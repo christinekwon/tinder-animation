@@ -52,6 +52,9 @@ module.exports = {
         },
     },
     plugins: [
-        new HtmlWebpackPlugin({ title: pkg.title, favicon: 'src/favicon.ico' }),
-    ],
+        new HtmlWebpackPlugin({ 
+            title: pkg.title, 
+            template: "src/index.html",
+            favicon: 'src/favicon.ico' }),    
+        ],
 };

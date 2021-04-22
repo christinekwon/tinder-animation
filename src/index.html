@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    .container {
+      text-align: left;
+      align-content: left;
+      position: absolute;
+      margin: 25px;
+    }
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: rgb(118, 118, 118);
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  left: 50px;
+  top: 0px;
+  font-size: 12px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+    .tooltip {
+      font-family: "Roboto Mono";
+      font-weight: 300;
+      align-content: center;
+      /* position: absolute; */
+      display: inline-block;
+      /* margin: 3%; */
+      border: 3px solid white;
+      color: white;
+      background: transparent;
+      padding: 5px 10px;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .main-container {
+      text-align: center;
+      align-content: center;
+      position: absolute;
+      margin: 0 auto;
+      width: 100%;
+      visibility: hidden;
+      /* background-color: red; */
+    }
+
+    #quote {
+      font-family: "Roboto Mono";
+      align-content: center;
+      text-align: center;
+      padding: 50px;
+      border-radius: 20px;
+      margin: 35vh 20vw;
+      /* width: 100%; */
+      background-color: #ffe9f1;
+      display: inline-block;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 0 10px 20px #ffe9f1;
+      color:rgb(118, 118, 118);
+    }
+
+    .intro-container {
+      text-align: center;
+      align-content: center;
+      position: absolute;
+      margin: 0 auto;
+      width: 100%;
+      visibility: hidden;
+      /* background-color: blue; */
+    }
+    .typed {
+      font-family: "Roboto Mono";
+      font-size: 15px;
+      font-weight: 700;
+      align-content: center;
+      text-align: center;
+      padding: 1px;
+      /* border-radius: 20px; */
+      margin: 50vh 20vw;
+      width: 110px;
+      height: 30px;
+      /* width: 100%; */
+      /* background-color:white; */
+      /* border: 5px solid white; */
+      border-radius: 15px;
+      display: inline-block;
+      opacity: 1;
+      visibility: visible;
+      /* color:#ff655b; */
+      color: white;
+      line-height: 200%;
+    }
+  </style>
+
+  <body onload="start()">
+    <div class="container">
+      <div class="tooltip">?
+        <span class="tooltiptext">press 'space' to exit any of the pop-ups ~</span>
+      </div>
+      <!-- <button id="info">?</button> -->
+      <br>
+      <!-- <div id="info-text">"qwertyui" on the keyboard corresponds to music notes "cdefgabc" :)</div> -->
+    </div>
+    <div class="main-container">
+      <div id="quote">~ ^_^ ~</div>
+    </div>
+    <div class="intro-container">
+      <span class="typed" id="typed"></span>
+    </div>
+  </body>
+  
+  <script>
+    function start() {
+      setTimeout(type, 2000);
+
+    }
+    function type() {
+      messages = [
+        // "loading...",
+    ];
+
+    var typed = new Typed('.typed', {
+        strings: messages,
+        // 25 is good
+        typeSpeed: 100,
+        showCursor: false,
+        cursorChar: '|',
+        autoInsertCss: true,
+    });
+}
+  </script>
+</html>
